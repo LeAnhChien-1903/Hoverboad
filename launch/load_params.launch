@@ -1,0 +1,5 @@
+<launch>
+	<group ns = "PID">
+    	<rosparam file="$(find hoverboard_control)/config/params.yaml" />
+	</group>
+</launch>

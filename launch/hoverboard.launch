@@ -1,0 +1,9 @@
+<launch>
+    <node name = "serial_node" pkg = "rosserial_python" type = "serial_node.py">
+    <param name = "port" type = "string" value = "/dev/ttyACM0"/>
+    <param name = "baund" type = "int" value = "57600"/>
+    </node>
+    <node name = "rqt_reconfigure" pkg = "rqt_reconfigure" type = "rqt_reconfigure" output = "screen"/>
+    <node name = "hoverboard_control" pkg = "hoverboard_control" type = "hoverboard_control_ros_param.py" output = "screen"/>
+    <node name = "plotjuggler" pkg = "plotjuggler" type = "plotjuggler"/>
+</launch>
